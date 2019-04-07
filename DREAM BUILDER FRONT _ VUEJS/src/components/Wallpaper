@@ -1,0 +1,53 @@
+<template>
+    <div id="wallpapers">
+
+        <div class="img">
+            <img  src="@/assets/img/technology.jpg" class="wallpaper phone" alt="wallpaper of dreambuilder">
+        </div>
+
+        <div class="img">
+            <img  src="@/assets/img/pencils.jpg" class="wallpaper tablet" alt="wallpaper of dreambuilder">
+        </div>
+
+    </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang="scss" scoped>
+
+.wallpapers {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+@media screen and (min-width:650px ) and (max-width: 1025px){
+  .wallpaper.tablet img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /* c'est pour mettre une image de fond c'est l'equivalent de background-size:cover */
+	      z-index: -1; /* c'est pour jouer avec la profondeur*/
+    }
+
+     .wallpaper.phone {
+         display: none;
+    }
+}
+
+@media screen and (max-width:650px){
+    .wallpaper.phone img{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; /* c'est pour mettre une image de fond c'est l'equivalent de background-size:cover */
+    }
+
+     .wallpaper.tablet {
+         display: none;
+    }
+}
+
+</style>
