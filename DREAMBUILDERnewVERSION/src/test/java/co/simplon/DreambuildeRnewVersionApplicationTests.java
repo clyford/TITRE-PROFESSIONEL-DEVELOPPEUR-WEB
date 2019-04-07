@@ -1,10 +1,13 @@
 package co.simplon;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
+
 
 
 
 import org.junit.After;
+
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,13 +15,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import co.simplon.model.annonce.Annonce;
 import co.simplon.model.annonce.IAnnonceRepository;
-import co.simplon.model.role.IRoleRepository;
-import co.simplon.model.role.Role;
-import co.simplon.model.simple_user.ISimple_userRepository;
-import co.simplon.model.simple_user.Simple_user;
+import co.simplon.model.role.IRolestatutRepository;
+import co.simplon.model.role.Rolestatut;
+//import co.simplon.model.role.IRoleRepository;
+//import co.simplon.model.role.Role;s
 import co.simplon.model.utilisateur.IUtilisateurRepository;
 import co.simplon.model.utilisateur.Utilisateur;
 
@@ -29,7 +31,7 @@ public class DreambuildeRnewVersionApplicationTests {
 	//private static final LocalDateTime LocalDateTime = null;
 
 	@Autowired
-	IRoleRepository role;
+	IRolestatutRepository rolestatut;
 
 
 	@Autowired
@@ -50,69 +52,39 @@ public class DreambuildeRnewVersionApplicationTests {
 	}
 	@Test
 	public void contextLoads() {
-
-		/*Utilisateur Pierre = new Utilisateur(1l, true, "Pierre", "Louis", "jeandujardin@gmail.com", "piere90", "secret1014");
-		user.save(Pierre);*/
-
-		/*Utilisateur jean = new Utilisateur(0l, true, "Pierre", "Louis", "jeandujardin@gmail.com", "piere90", "secret1014");
-		user.save(jean);*/
-		/*Utilisateur herve = new Utilisateur(3l, true, "Pierre", "Louis", "jeandujardin@gmail.com", "piere90", "secret1014");
-		user.save(herve);*/
-
-		/*Utilisateur herve = new Utilisateur(31l, true, "Pierre", "Louis", "jeandujardin@gmail.com", "piere90", "secret1014");
-		user.delete(herve);*/
-		/*Utilisateur herv = new Utilisateur(31l, true, "Poo", "Lou", "jeandujardin@gmail.com", "KAKA90", "secret1014");
-		user.save(herv);*/
-		/*Utilisateur herv8 = new Utilisateur(31l, null, true, "Chienne", "pute", "jeandujardin@gmail.com", "KAKA90", "secret1014");
-		user.save(herv8);*/
-
-		/*Utilisateur herv18 = new Utilisateur(31l, null, true, "Chiennedeguerre", "putain", "jeandujardin@gmail.com", "KAKA9090", "secret1014", null);
-		user.save(herv18);*/
-
-		/*Annonce dessinateur = new Annonce(null, null, null, "", null, null);
+		
+		Utilisateur pierot = new Utilisateur(null, false, "Storyboarder", "oeinull", "ninull", "lpiooalme@gmail.com", "nullos", "null0000");
+		user.save(pierot);
+		
+		Utilisateur jiean = new Utilisateur(null, false, "Storyboarder", "oeinull", "ninull", "loniaoodopfe@gmail.com", "nullos", "null0000");
+		user.save(jiean);
+		
+		Utilisateur frederick = new Utilisateur(null, false,  "Mamadou", "Mbele","MangaArtist", "rodrigueme@gmail.com", "nullos", "null0000");
+		user.save(frederick);
+		
+		Utilisateur ronald = new Utilisateur(null, false, "Pierre", "dembele","Ecrivain",  "mariefe@gmail.com", "nullos", "null0000");
+		user.save(ronald);
+		
+		Annonce mamadou= new Annonce("LILLE", "JPA Happy", "storyboarder", pierot);
+		annonce.save(mamadou);
+		
+		Annonce dessinateur = new Annonce( "STRASBOURG", "innnn", "mangaartist", jiean);
 		annonce.save(dessinateur);
-
-		Annonce pierre = new Annonce(0l, null, true, "FF", "null", "null");
-		annonce.save(pierre);
-
-		Annonce a = new Annonce(1l, null, true, "CACA", "PIPI", "RESTAU");
-		annonce.save(a);
-
-		Annonce B = new Annonce(2l, null, true, "CACA", "PIOPI", "RESTAU");
-		annonce.save(B);
-
-		Annonce C = new Annonce(2l, null, true, "CACA", "PIOPI", "RESTAU");
-		annonce.save(C);*/
-		/*Annonce dessinateu = new Annonce(null, null, null, "", null, null);
-		annonce.save(dessinateu);
-
-		Annonce pirre = new Annonce(0l, null, true, "FF", "null", "null");
-		annonce.save(pirre);
-
-		Annonce aB = new Annonce(1l, null, true, "CACA", "PIPI", "RESTAU");
-		annonce.save(aB);
-
-		Annonce BB = new Annonce(2l, null, true, "CACA", "PIOPI", "RESTAU");
-		annonce.save(BB);
-
-		Annonce CB = new Annonce(3l, null, true, "CACA", "PIOPI", "RESTAU");
-		annonce.save(CB);*/
-		/*Role premium = new Role(10l, null, "null", "null", "java cest de la merede");
-		role.save(premium);*/
-
-		/*Annonce scenariste = new Annonce(10l, null, true,  "paris", "gchgkc","yesman");
-		annonce.save(scenariste);
 		
-		Annonce newman = new Annonce(19l, null, true,  "MARSEILLE", "JAVA CEST NULL","DESINATEUR");
-		annonce.save(newman);*/
+		Annonce manga= new Annonce("LILLE", "JPA Happy", "storyboarder", ronald);
+		annonce.save(manga);
 		
-		Utilisateur fenec = new Utilisateur(13l, null, true, "yeahk", "javscript", "htmlcss@gmail.com", "produit", "00000000",null, null);
-		user.save(fenec);
+		Annonce xavier = new Annonce( "STRASBOURG", "innnn", "mangaartist", frederick);
+		annonce.save(xavier);
+
 		
-		Role Premium= new Role(null, null, "", null, null);
-		role.save(Premium);
-
-
+		
+	
+//		Rolestatut pierreot= new Rolestatut("administrateur");		rolestatut.save(pierreot);		
+//		Rolestatut Premmiam= new Rolestatut( "premiumnormal");
+//	rolestatut.save(Premmiam);
+		
+		
 	}
 	
 }
